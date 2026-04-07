@@ -215,18 +215,21 @@ code {
 }
 
 .hero-card {
-    overflow: hidden;
+    padding: 1.35rem 1.35rem 1.5rem;
 }
 
 .hero-avatar {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    border-radius: 50%;
     object-fit: cover;
     background: #d1d7d5;
+    border: 2px solid rgba(18, 52, 59, 0.1);
 }
 
 .hero-card-body {
-    padding: 1.5rem;
+    padding: 0.9rem 0 0;
 }
 
 .hero-card-body h2 {
