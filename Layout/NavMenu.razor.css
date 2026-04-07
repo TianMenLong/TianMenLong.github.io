@@ -1,24 +1,30 @@
 .navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
+    border: 0;
+    padding: 0.45rem 0.7rem;
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .top-row {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    min-height: 4rem;
+    background: rgba(0, 0, 0, 0.18);
 }
 
 .navbar-brand {
-    font-size: 1.1rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .bi {
     display: inline-block;
     position: relative;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.1rem;
+    height: 1.1rem;
     margin-right: 0.75rem;
     top: -1px;
     background-size: cover;
+    flex-shrink: 0;
 }
 
 .bi-house-door-fill-nav-menu {
@@ -37,51 +43,60 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.603-3.362L8 9.583l-1.363-.686-5.603 3.362A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z'/%3E%3C/svg%3E");
 }
 
-.nav-item {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+.nav-scrollable {
+    padding: 0.55rem 0 1rem;
 }
 
-    .nav-item:first-of-type {
-        padding-top: 1rem;
-    }
+.nav-item {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.9rem;
+}
 
-    .nav-item:last-of-type {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item ::deep a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
+.nav-item ::deep a {
+    color: rgba(255, 255, 255, 0.9);
+    min-height: 2.9rem;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0.95rem;
+    border-radius: 14px;
+    line-height: 1.25;
+    text-decoration: none;
+    transition: background-color 0.18s ease, transform 0.18s ease;
+}
 
 .nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.37);
-    color: white;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
 }
 
 .nav-item ::deep a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
 }
 
-@media (min-width: 641px) {
+@media (max-width: 899.98px) {
+    .nav-scrollable {
+        padding-bottom: 0.85rem;
+    }
+
+    .nav-item {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+@media (min-width: 900px) {
     .navbar-toggler {
         display: none;
     }
 
     .collapse {
-        /* Never collapse the sidebar for wide screens */
         display: block;
     }
-    
+
     .nav-scrollable {
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
+        height: calc(100vh - 4rem);
         overflow-y: auto;
+        padding-top: 0.75rem;
     }
 }

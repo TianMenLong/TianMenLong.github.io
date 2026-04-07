@@ -1,17 +1,20 @@
 @inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
-    <main>
-        <div class="top-row px-4">
-            <div class="top-row-title">TianMen_Long个人综合信息网站</div>
-            <a href="/contact">合作咨询</a>
+<div class="page">
+    <aside class="sidebar">
+        <NavMenu />
+    </aside>
+
+    <main class="main-shell">
+        <div class="top-row">
+            <div class="top-row-title">TianMen_Long 个人综合信息</div>
+            <a class="top-row-link" href="/contact">合作咨询</a>
         </div>
 
-        <article class="content px-4">
-            @Body
+        <article class="content">
+            <div class="content-inner">
+                @Body
+            </div>
         </article>
     </main>
 </div>
